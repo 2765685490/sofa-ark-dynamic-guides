@@ -1,5 +1,6 @@
 package io.sofastack.dynamic.provider.controller;
 
+import cn.hutool.core.lang.id.NanoId;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -14,6 +15,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class ModuleController {
     @RequestMapping("module")
     public String master(){
-        return "SUCCESS FROM MODULE";
+        return NanoId.randomNanoId() + "SUCCESS FROM MODULE";
     }
 }
